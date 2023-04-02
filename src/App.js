@@ -28,10 +28,10 @@ class App extends Component {
   }
 
   onClickFetchWeather = () => {
-    fetch(`http://dataservice.accuweather.com/locations/v1/cities/search?apikey=Zgug1Kxt7jih3YTp4Liwd27r0VKm8uGG&q=${this.state.input}`)
+    fetch(`https://dataservice.accuweather.com/locations/v1/cities/search?apikey=Zgug1Kxt7jih3YTp4Liwd27r0VKm8uGG&q=${this.state.input}`)
       .then(response => response.json())
       .then((data) => {
-        fetch(`http://dataservice.accuweather.com/currentconditions/v1/${data[0].Key}?apikey=Zgug1Kxt7jih3YTp4Liwd27r0VKm8uGG&details=true`)
+        fetch(`https://dataservice.accuweather.com/currentconditions/v1/${data[0].Key}?apikey=Zgug1Kxt7jih3YTp4Liwd27r0VKm8uGG&details=true`)
         .then(response => response.json())
         .then((data) => {
           this.setState({
