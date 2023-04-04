@@ -27,6 +27,12 @@ class App extends Component {
     this.setState({ input: event.target.value })
   }
 
+  handleKeyPress = (event) => {
+    if (event.key === 'Enter') {
+      this.Fetch();
+    }
+  };
+
   onClickFetchWeather = () => {
     fetch(`https://dataservice.accuweather.com/locations/v1/cities/search?apikey=Zgug1Kxt7jih3YTp4Liwd27r0VKm8uGG&q=${this.state.input}`)
       .then(response => response.json())
@@ -122,7 +128,9 @@ class App extends Component {
     return (
       <div className="App">
           <h1> Where are you going? </h1>
-          <input onChange = {this.onInputChange} placeholder='Enter city'/>
+          <input onChange = {this.onInputChange}
+                 onKeyDown = {this.handleKeyPress}
+                 placeholder='Enter city'/>
           <button onClick = {this.Fetch}> Go!</button> <br/>
           <p> Name of city is case sensitive and must be in English. E.g: London = correct. LONDON or london = not correct. </p>
         <div className='results'>
