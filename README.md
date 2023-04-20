@@ -1,4 +1,4 @@
-#Travel
+# Travel
 
 This is a simple project to practice using React and API requests. The app is intended to helps travelers prepare for a trip. The user types in the name of a city and the app returns useful information about the destination. I wanted to include cost of living data, but I couldn't find a free alternative to the Numbeo API, so just to illustrate the concept, I chose to display current weather information (https://developer.accuweather.com/), and a cheap flight ticket offer from my location, PRAGUE, CZR to the specified destination (https://developers.amadeus.com/, https://airlabs.co/). Details about how the information is retrieved or the amount of data available can be found on each website. 
 
