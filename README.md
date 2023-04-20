@@ -5,6 +5,7 @@ This is a simple project to practice using React and API requests. The app is in
 For the purpose of this exercise, I've decided to keep everything simple and limit the amount of information that is requested and displayed. The possibilities, however, are great, and these tools may be used at a professional level.  
 
 Version 1.2 may include rewriting of some passages for better readability and improved efficiency (e.g.then() to Async/Await).
+
 Version 2.0 may include a flights search widget with the option to change origin location and choose dates, several flight offers on display, weather forecast for several days, in addition to the current conditions, and better styling. 
 
 *work in progress*
