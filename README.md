@@ -1,6 +1,6 @@
 # Travel
 
-This is a simple project using React and API requests. **Travel** helps travelers prepare for a trip. The user types in the name of a city and gthe app returns useful information about the destination + a cheap flight ticket offer.
+This is a simple project using React and API requests. **Travel** helps travelers prepare for a trip. The user types in the name of a city and the app returns useful information about the destination + a cheap flight ticket offer.
 
 **Travel** is simple and limited in the amount of information that requests and displays. However, these basic funcionalities may be used at a professional level and the possibilities are great. 
 
