@@ -1,11 +1,13 @@
 # Travel
 
-This is a simple project to practice using React and API requests. The app is intended to help travelers prepare for a trip. The user types in the name of a city and the app returns useful information about the destination. I wanted to include cost of living data, but I couldn't find a free alternative to Numbeo API, so I chose to display current weather information (https://developer.accuweather.com/), and a cheap flight ticket offer from my location, PRAGUE, CZR to the specified destination (https://developers.amadeus.com/, https://airlabs.co/). Details about how the information is retrieved or the amount of data available can be found on each website. 
+This is a simple project using React and API requests. **Travel** helps travelers prepare for a trip. The user types in the name of a city and receives useful information about the destination + a cheap flight ticket offer.
 
-For the purpose of this exercise, I've decided to keep everything simple and limit the amount of information that is requested and displayed. The possibilities, however, are great, and these tools may be used at a professional level.  
+**Travel** is simple and limited in the amount of information that requests and displays. However, these basic funcionalities may be used at a professional level and the possibilities are great. 
 
-Version 1.2 may include rewriting of some passages for better readability and improved efficiency (e.g.then() to Async/Await).
+**Travel** displays current weather information (https://developer.accuweather.com/) and a cheap flight ticket offer to the specified destination (https://developers.amadeus.com/, https://airlabs.co/). Details about how the information is retrieved or the amount of data available can be found on each API website. The app uses the current date and PRAGUE, CZR, as parameters for the flight ticket search. An updated version could include an actual flights search widget with the option to change origin location and choose dates
 
-Version 2.0 may include a flights search widget with the option to change origin location and choose dates, several flight offers on display, weather forecast for several days, in addition to the current conditions, and better styling. 
+Ideally, **Travel** will also include cost of living data (e.g. Numbeo API) as soon as I'm able to find a free resource.
+
+Version 1.2 may include rewriting of some passages for better readability and improved efficiency (e.g.then() to Async/Await), weather forecast for several days, in addition to the current conditions, and better styling. 
 
 *work in progress*
