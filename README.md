@@ -1,6 +1,6 @@
 # Travel
 
-This is a simple project using React and API requests. Altbough the amount of information requested and displayed is little, these basic funcionalities may be used at a professional level and the possibilities are great. 
+This is a simple project using React and API requests. Although the amount of information requested and displayed is little, these basic funcionalities may be used at a professional level and the possibilities are great. 
 
 **Travel** helps travelers prepare for a trip. The user types in the name of a city and the app returns the following useful information about the destination: 
 
