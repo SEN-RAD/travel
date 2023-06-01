@@ -1,0 +1,18 @@
+p {
+    font-style: italic;
+  }
+  
+  button:hover {
+    cursor: pointer;
+  }
+  
+  p, h1 {
+    font-family: 'Lato', sans-serif;
+    src: url('./fonts/Lato/Lato-Regular.ttf') format('truetype');
+  }
+
+  .logo {
+    max-width: 200px;
+    max-height: 200px;
+  }
+  

@@ -1,25 +1,7 @@
 .App {
-  text-align: center;
-  
+  height: 100vh;
 }
 
-.results {
-  display: flex;
-  flex-flow: row wrap;
-}
 
-.flights{
-  flex: 1.5;
-}
 
-.weather{
-  flex: 1;
-}
 
-p {
-  font-style: italic;
-}
-
-button:hover {
-  cursor: pointer;
-}

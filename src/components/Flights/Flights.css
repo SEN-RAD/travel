@@ -1,0 +1,51 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/weather-icons/1.2/css/weather-icons.min.css);
+
+
+#flights_wrapper {
+  width: 400px;
+  margin: 100px auto;
+  position: relative;
+}
+
+.infoFlights {
+  width: 800px;
+  height: 40px;
+  position: relative;
+  right: 0;
+  background: black;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 3.5rem;
+}
+
+.infoFlights2 {
+  width: 800px;
+  height: 90px;
+  right: 0;
+  background: rgb(42, 178, 234);
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+
+.carrier {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.carrier1 {
+  margin-left: -2rem;
+}
+
+.route {
+  margin-left: 2rem;
+}

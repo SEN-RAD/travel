@@ -4,17 +4,20 @@
 body {
   background: linear-gradient(90deg, #7474BF 10%, #348AC7 90%);
 }
-#weather_wrapper{
+
+#weather_wrapper {
   width: 400px;
   margin: 100px auto;
 }
-.weatherCard{
+
+.weatherCard {
   width: 400px;
   height: 200px;
   font-family: 'Open Sans';
   position: relative;
 }
-.currentTemp{
+
+.currentTemp {
   width: 220px;
   height: 200px;
   background: rgb(41, 41, 41);
@@ -22,7 +25,8 @@ body {
   top: 0;
   left: 0;
 }
-.currentWeather{
+
+.currentWeather {
   width: 180px;
   height: 200px;
   background: rgb(237, 237, 237);
@@ -31,7 +35,8 @@ body {
   top: 0;
   right: 0;
 }
-.temp{
+
+.temp {
   font-size: 80px;
   text-align: center;
   display: block;
@@ -39,7 +44,8 @@ body {
   color: rgb(255, 255, 255);
   padding: 20px 0 0;
 }
-.location{
+
+.location {
   color: rgb(255, 255, 255);
   text-align: center;
   text-transform: uppercase;
@@ -47,14 +53,15 @@ body {
   font-size: 30px;
   display: block;
 }
-.conditions{
+
+.conditions {
   font-family: weathericons;
   font-size: 80px;
   display: block;
   padding: 10px 0 0;
-  text-align: center;
 }
-.info{
+
+.info {
   width: 180px;
   height: 50px;
   position: absolute;
@@ -65,6 +72,7 @@ body {
   color: rgb(255, 255, 255);
   text-align: center;
 }
+
 .rain {
   width: 50%;
   position: absolute;
@@ -72,7 +80,8 @@ body {
   word-spacing: 60px;
   top: 3px;
 }
-.rain::before{
+
+.rain::before {
   display: block;
   content: '\f04e';
   font-family: weathericons;
@@ -81,6 +90,7 @@ body {
   top: -4px;
   position: absolute;
 }
+
 .wind {
   width: 50%;
   right: -10px;
@@ -88,7 +98,8 @@ body {
   word-spacing: 60px;
   top: 3px;
 }
-.wind::before{
+
+.wind::before {
   display: block;
   content: '\f050';
   font-family: weathericons;
@@ -96,4 +107,10 @@ body {
   left: -10px;
   position: absolute;
   top: 5px;
+}
+
+.description {
+  text-align: center;
+  justify-content: center;
+  font-size: large;
 }
