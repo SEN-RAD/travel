@@ -11,6 +11,4 @@ Further details about how the information is gathered or the amount of data avai
 
 This is *work in progress*. 
 
-Version 2.0 may include rewriting of some passages for better readability and improved efficiency (e.g.then() to Async/Await), weather forecast for several days, in addition to the current conditions. **Travel** will also include cost of living data (e.g. Numbeo API) as soon as I'm able to find a free resource to work with.
-
-An updated version might include an actual flights search widget with the option to change origin location and choose dates or 
+Version 2.0 may include rewriting of some passages for better readability and improved efficiency, weather forecast for several days, cost of living data (e.g. Numbeo API) as soon as I'm able to find a free resource to work with, and might include an actual flights search widget with the option to change origin location and choose dates.
