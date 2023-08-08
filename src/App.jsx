@@ -11,6 +11,7 @@ class App extends Component {
     this.state = {
       input: ' ',
       inputSubmitted: ' ',
+      inputError: ' ',
       temperature: 0,
       windSpeed: 0,
       precipitation: 0,
@@ -70,9 +71,18 @@ class App extends Component {
       .then(response => response.json())
       .then((data) => {
         this.setState({
-          iataCode: data.response.airports[0].iata_code
-        }, this.fetchFlights())
+          iataCode: data.response.airports[0].iata_code,
+          inputError: '',
+        }, () => {
+          this.fetchFlights();
+        });
       })
+      .catch(error => {
+        console.error('Error fetching flight details:', error);
+        this.setState({
+          inputError: 'An error occurred. Please check for spelling mistakes or invalid city name.'
+        });
+      });
   };
 
   fetchFlights = () => {
@@ -143,7 +153,8 @@ class App extends Component {
       airline,
       time,
       itinerary,
-      inputSubmitted
+      inputSubmitted,
+      inputError
     } = this.state;
 
     return (
@@ -153,6 +164,7 @@ class App extends Component {
           fetchOnKeyDown={this.handleKeyPress}
           fetchOnClick={this.fetchData}
         />
+        <p className='flex justify-center red b f3'>{inputError}</p>
         <div className='flex justify-center'>
           <div className='w-50 pr5'>
             <Flights
