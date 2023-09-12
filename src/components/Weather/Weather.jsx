@@ -13,7 +13,7 @@ const Weather = (props) => {
 				</div>
 				<div className="currentWeather">
 					<span className="conditions tc">
-						<img className='icon' src={require(`./icons/${icon}.png`)} alt=" "/> 
+						<img className='icon' src={require(`./icons/${icon}.png`)} alt=" " />
 					</span>
 					<div className='description tc'>{description}</div>
 					<div className="info">
