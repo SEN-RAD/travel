@@ -1,8 +1,16 @@
 import React from 'react';
 import './Weather.css';
 
-const Weather = (props) => {
-	const { inputChange, temperature, icon, windSpeed, precipitation, description } = props;
+interface Props {
+	inputChange: string;
+	temperature: number;
+	icon: number;
+	windSpeed: number;
+	precipitation: number;
+	description: string;
+}
+
+const Weather: React.FC<Props> = ({ inputChange, temperature, icon, windSpeed, precipitation, description }) => {
 
 	return (
 		<div id="weather_wrapper">

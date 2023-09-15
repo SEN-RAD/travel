@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, ChangeEvent } from 'react';
 import Weather from './components/Weather/Weather';
 import Flights from './components/Flights/Flights';
 import SearchBox from './components/SearchBox/SearchBox';
@@ -6,7 +6,7 @@ import './App.css';
 import CircularProgress from '@mui/material/CircularProgress';
 
 
-const App = () => {
+const App: React.FC = () => {
 
   const [input, setinput] = useState('');
   const [inputSubmitted, setinputSubmitted] = useState('');
@@ -24,11 +24,11 @@ const App = () => {
   const [itinerary, setitinerary] = useState('');
   const [visible, setvisible] = useState(false);
 
-  const onInputChange = (event) => {
+  const onInputChange = (event: ChangeEvent<HTMLInputElement>) => {
     setinput(event.target.value);
   }
 
-  const handleKeyPress = (event) => {
+  const handleKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key === 'Enter') {
       setinputSubmitted(input);
       setvisible(true);
@@ -36,14 +36,14 @@ const App = () => {
     }
   };
 
-  const fetchData = () => {
+  const fetchData = (): void => {
     fetchFlightDetails();
     fetchWeather();
     setinputSubmitted(input);
     setvisible(true);
   }
 
-  const fetchWeather = () => {
+  const fetchWeather = (): void => {
     fetch(`https://dataservice.accuweather.com/locations/v1/cities/search?apikey=Zgug1Kxt7jih3YTp4Liwd27r0VKm8uGG&q=${input}`)
       .then(response => response.json())
       .then((data) => {
@@ -59,7 +59,7 @@ const App = () => {
       })
   };
 
-  const fetchFlightDetails = () => {
+  const fetchFlightDetails = (): void => {
     fetch(`https://airlabs.co/api/v9/suggest?q=${input}&api_key=0b8bb7e6-e676-40db-a94b-03e3018e8ad4`)
       .then(response => response.json())
       .then((data) => {
@@ -80,9 +80,9 @@ const App = () => {
     }
   }, [iataCode]);
 
-  let prevIataCode = null;
+  let prevIataCode = null as string | null;
 
-  const fetchFlights = () => {
+  const fetchFlights = (): void => {
     fetch('https://test.api.amadeus.com/v1/security/oauth2/token', {
       method: 'POST',
       headers: {
@@ -117,9 +117,9 @@ const App = () => {
     }
   }, [carrier]);
 
-  let prevCarrier = null;
+  let prevCarrier = null as string | null;
 
-  const carrierDetails = () => {
+  const carrierDetails = (): void => {
     fetch('https://test.api.amadeus.com/v1/security/oauth2/token', {
       method: 'POST',
       headers: {
@@ -143,8 +143,6 @@ const App = () => {
       })
   }
 
-
-
   return (
     <div className="App">
       <SearchBox
@@ -163,10 +161,10 @@ const App = () => {
           <div className='flex justify-center'>
             <div className='w-50 pr5'>
               <Flights
-                ticketPrice={price}
+                ticketPrice={parseFloat(price)}
                 airline={airline}
                 duration={time}
-                route={itinerary}
+                route={parseInt(itinerary, 10)}
               />
             </div>
             <div className='w-50 pl5'>

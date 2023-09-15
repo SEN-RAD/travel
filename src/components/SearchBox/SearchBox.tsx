@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { ChangeEvent } from 'react';
 import './SearchBox.css';
 
-const SearchBox = (props) => {
-    const { onInputChange, fetchOnKeyDown, fetchOnClick } = props;
+interface Props {
+	onInputChange: (event: ChangeEvent<HTMLInputElement>) => void;
+	fetchOnKeyDown:  (event: React.KeyboardEvent<HTMLInputElement>) => void;
+	fetchOnClick: () => void;
+}
+
+const SearchBox: React.FC<Props> = ({ onInputChange, fetchOnKeyDown, fetchOnClick }) => {
+   
     return (
         <div>
             <div className='flex justify-start'>

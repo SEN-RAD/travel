@@ -1,8 +1,14 @@
 import React from 'react';
 import './Flights.css';
 
-const Flights = (props) => {
-	const { route, duration, airline, ticketPrice } = props
+interface Props {
+	route: number;
+	duration: string;
+	airline: string;
+	ticketPrice: number;
+}
+
+const Flights: React.FC<Props> = ({ route, duration, airline, ticketPrice }) => {
 	const routeLength = route === 1 ? 'DIRECT' :
 		route > 1 ? `STOPS: ${route}` : '';
 
