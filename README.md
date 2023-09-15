@@ -2,10 +2,6 @@
 
 Built with React.
 
-## Idea
-
-When preparing for a trip, it'd be great to have a website where you could type in your destination and find out about all the relevant details you need. I started off with the intention of showing cost of living data (e.g. how expensive is a coffee, taxi, hotel room, etc.), but I was unable to find a free API for such purposes.
-
 ### Functionality
 
 The user types in the name of a city and the app returns the following useful information about the destination: 
