@@ -1,6 +1,6 @@
 # Travel
 
-Built with React, as a practice project.
+Practice project built with React using JSX and class components and later updated to TSX and functional components.
 
 ## Functionality 🚀
 
